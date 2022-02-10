@@ -51,7 +51,7 @@ if __name__ == "__main__":
   fileImport = parser.add_argument_group("phonebook load")
   fileImport.add_argument("--load", nargs="+",
     help="load phonebooks from file by name")
-  fileImport.add_argument("--country-code", dest="country_code", default="+41",
+  fileImport.add_argument("--country-code", dest="country_code", default="+49",
     help="country code, e.g. +41")
   fileImport.add_argument("--vip-groups", dest="vip_groups", nargs="+", default=["Family"],
     help="vip group names")
