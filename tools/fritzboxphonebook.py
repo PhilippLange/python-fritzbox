@@ -97,10 +97,10 @@ if __name__ == "__main__":
       books = fritzbox.phonebook.Phonebooks()
       for f in args.load:
         print("load phonebook from %s" % args.load)
-        ext = os.path.splitext(args.load)[1].lower()
+        ext = os.path.splitext(args.load[0])[1].lower()
         if ext == ".csv":
           csv = fritzbox.CSV.Import()
-          tmp = csv.get_books(args.load, args.vip_groups, debug=args.debug)
+          tmp = csv.get_books(args.load[0], args.vip_groups, debug=args.debug)
           books.addPhonebooks(tmp)
         elif ext == ".ldif":
           ldif = fritzbox.LDIF.Import()
